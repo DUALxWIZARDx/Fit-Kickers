@@ -18,10 +18,10 @@ import {
 const ACADEMY_WHATSAPP_NUMBER = "919876543210";
 
 const DISCIPLINES = [
-  "Taekwondo",
-  "Kickboxing",
-  "Self-Defense",
-  "MMA",
+  "Beginner Taekwondo (White to Green Belt)",
+  "Advanced Taekwondo (Blue to Black Belt)",
+  "Olympic Sparring & Competition Batch",
+  "Poomsae & Belt Progression Batch",
 ];
 
 interface FormState {
@@ -38,7 +38,7 @@ export default function InquiryForm() {
     phone: "",
     age: "",
     locality: "",
-    discipline: "Taekwondo",
+    discipline: "Beginner Taekwondo (White to Green Belt)",
   });
 
   const [submitted, setSubmitted] = useState(false);

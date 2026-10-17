@@ -34,169 +34,169 @@ interface DisciplineData {
 
 const DISCIPLINES: DisciplineData[] = [
   {
-    id: "taekwondo",
-    name: "Taekwondo",
-    shortTag: "Dynamic Kicks & Agility",
+    id: "poomsae",
+    name: "Poomsae (Traditional Forms)",
+    shortTag: "Stances, Patterns & Belt Progression",
     icon: Zap,
     bullets: [
       {
-        tag: "Dynamic Kicks",
-        text: "Build flexibility, height, and explosive leg power",
+        tag: "Traditional Stances",
+        text: "Master precise balance, posture, and alignment fundamentals",
       },
       {
-        tag: "Traditional Focus",
-        text: "Master form discipline and belt progression",
+        tag: "Block-and-Strike Patterns",
+        text: "Execute seamless defensive blocks and counter-attacks",
       },
       {
-        tag: "Agility & Reflexes",
-        text: "Sharpen reaction speed and coordination",
+        tag: "Belt Progression",
+        text: "Official Kukkiwon-recognized forms from White to Black Belt",
       },
     ],
     batches: [
       {
-        title: "Morning Conditioning Batch",
+        title: "Morning Poomsae Precision Batch",
         days: "Mon / Wed / Fri",
-        time: "7:00 AM – 8:30 AM",
-        badge: "Teens & Adults",
+        time: "6:30 AM – 7:45 AM",
+        badge: "All Ranks",
       },
       {
-        title: "Evening Junior & Youth Batch",
-        days: "Mon / Wed / Fri",
-        time: "4:30 PM – 5:45 PM",
-        badge: "Ages 4–15",
-      },
-      {
-        title: "Night Advanced Sparring Batch",
+        title: "Evening Belt Progression Batch",
         days: "Tue / Thu / Sat",
-        time: "6:30 PM – 8:00 PM",
-        badge: "All Levels",
+        time: "4:30 PM – 5:45 PM",
+        badge: "Little Champions & Juniors",
+      },
+      {
+        title: "Black Belt Mastery & Dan Prep",
+        days: "Mon / Wed / Fri",
+        time: "7:00 PM – 8:30 PM",
+        badge: "Advanced & Dan Ranks",
       },
     ],
   },
   {
-    id: "kickboxing",
-    name: "Kickboxing",
-    shortTag: "Striking & Calorie Burn",
+    id: "kyorugi",
+    name: "Kyorugi (Olympic Sparring)",
+    shortTag: "Fast Footwork & Electronic Scoring",
     icon: Swords,
     bullets: [
       {
-        tag: "Maximum Calorie Burn",
-        text: "High-intensity cardio and heavy bag work",
+        tag: "Olympic Dynamic Kicking",
+        text: "High-speed roundhouse, cut kicks, and explosive spin head kicks",
       },
       {
-        tag: "Striking Combination",
-        text: "Master punches, knees, and shin kicks",
+        tag: "Tactical Footwork",
+        text: "Distance management, clinches, and tactical counter-striking",
       },
       {
-        tag: "Full-Body Toning",
-        text: "Core stabilization and conditioning",
+        tag: "Electronic Scoring Drills",
+        text: "Official WT sparring rules, chest guard target accuracy, and agility",
       },
     ],
     batches: [
       {
-        title: "Morning Fight Fit Batch",
-        days: "Tue / Thu / Sat",
-        time: "7:00 AM – 8:15 AM",
-        badge: "Adults",
+        title: "Cadet & Junior Sparring Prep",
+        days: "Tue / Thu",
+        time: "5:00 PM – 6:15 PM",
+        badge: "Ages 8–15",
       },
       {
-        title: "Evening Heavy Bag Drills",
+        title: "Senior Elite Sparring Camp",
         days: "Mon / Wed / Fri",
-        time: "5:30 PM – 6:45 PM",
-        badge: "Juniors & Teens",
+        time: "6:30 PM – 8:00 PM",
+        badge: "Teens & Adults",
       },
       {
-        title: "Night Pad Work & Sparring",
-        days: "Mon / Wed / Fri",
-        time: "7:00 PM – 8:30 PM",
-        badge: "All Levels",
+        title: "Saturday Competition Sparring Clinic",
+        days: "Saturday",
+        time: "9:00 AM – 11:00 AM",
+        badge: "Tournament Team",
       },
     ],
   },
   {
-    id: "self-defense",
-    name: "Self-Defense",
-    shortTag: "Tactical & Real-World",
+    id: "hosinsool",
+    name: "Hosinsool (Taekwondo Self-Defense)",
+    shortTag: "Joint Locks & Practical Defense",
     icon: Shield,
     bullets: [
       {
-        tag: "Real-World Scenarios",
-        text: "Practical escapes and wrist/joint releases",
+        tag: "Joint Locks & Escapes",
+        text: "Neutralize wrist grabs, collar grabs, and choke holds effortlessly",
       },
       {
-        tag: "Situational Awareness",
-        text: "Threat assessment and rapid reaction",
+        tag: "Counter-Strikes",
+        text: "Apply explosive Taekwondo elbow, knee, and open-hand strikes",
       },
       {
-        tag: "Confidence First",
-        text: "De-escalation tactics for all age groups",
+        tag: "Situational De-escalation",
+        text: "Real-world environmental awareness and verbal boundary control",
       },
     ],
     batches: [
       {
-        title: "Morning Awareness & Escape Batch",
-        days: "Mon / Wed",
-        time: "7:30 AM – 8:45 AM",
-        badge: "Adults & Teens",
-      },
-      {
-        title: "Evening Anti-Bullying Batch",
+        title: "Practical Self-Defense & Anti-Bullying",
         days: "Tue / Thu",
-        time: "4:00 PM – 5:15 PM",
+        time: "4:00 PM – 5:00 PM",
         badge: "Kids & Juniors",
       },
       {
-        title: "Evening Tactical Defense Batch",
+        title: "Adult Tactical Defense Workshop",
         days: "Mon / Wed / Fri",
-        time: "6:30 PM – 7:45 PM",
+        time: "6:00 PM – 7:15 PM",
+        badge: "Teens & Adults",
+      },
+      {
+        title: "Weekend Practical Defense Clinic",
+        days: "Sunday",
+        time: "10:00 AM – 11:30 AM",
         badge: "Open Batch",
       },
     ],
   },
   {
-    id: "mma",
-    name: "MMA (Mixed Martial Arts)",
-    shortTag: "Striking & Grappling Fusion",
+    id: "kyukpa",
+    name: "Kyukpa (Power & Demonstration)",
+    shortTag: "Board Breaking & Aerial Tricking",
     icon: Flame,
     bullets: [
       {
-        tag: "Complete Combat",
-        text: "Seamless fusion of striking and grappling",
+        tag: "Board Breaking Techniques",
+        text: "Focus kinetic energy into timber breaking using fists, palms, and feet",
       },
       {
-        tag: "Cage Work",
-        text: "Takedown defense, wall work, and control",
+        tag: "Aerial Tricking Kicks",
+        text: "Acrobatic jump spin kicks, 540s, and demonstration choreography",
       },
       {
-        tag: "Elite Athleticism",
-        text: "Strength, endurance, and mental toughness",
+        tag: "Focus Power",
+        text: "Build supreme mental clarity, commitment, and impact delivery",
       },
     ],
     batches: [
       {
-        title: "Morning Grappling & Conditioning",
-        days: "Tue / Thu / Sat",
-        time: "7:00 AM – 8:30 AM",
+        title: "Kyukpa Power Breaking Fundamentals",
+        days: "Wed / Fri",
+        time: "5:30 PM – 6:45 PM",
+        badge: "Intermediate & Above",
+      },
+      {
+        title: "Demo Team Aerial & Jump Kicks",
+        days: "Saturday",
+        time: "11:30 AM – 1:30 PM",
+        badge: "Demonstration Squad",
+      },
+      {
+        title: "Sunday Breaking & Power Conditioning",
+        days: "Sunday",
+        time: "4:00 PM – 5:30 PM",
         badge: "Teens & Adults",
-      },
-      {
-        title: "Evening Fundamentals & Wrestling",
-        days: "Mon / Wed / Fri",
-        time: "5:00 PM – 6:30 PM",
-        badge: "Juniors & Beginners",
-      },
-      {
-        title: "Night Cage Striking & Sparring",
-        days: "Mon / Wed / Fri",
-        time: "7:00 PM – 8:45 PM",
-        badge: "Advanced & Fight Team",
       },
     ],
   },
 ];
 
 export default function Disciplines() {
-  const [activeId, setActiveId] = useState<string>("taekwondo");
+  const [activeId, setActiveId] = useState<string>("poomsae");
 
   const currentDiscipline =
     DISCIPLINES.find((d) => d.id === activeId) || DISCIPLINES[0];
@@ -226,20 +226,19 @@ export default function Disciplines() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 shadow-[0_0_15px_rgba(239,68,68,0.2)] mb-4">
             <Sparkles className="w-3.5 h-3.5 text-red-500" />
             <span className="text-xs font-bold uppercase tracking-widest text-red-400">
-              TRAIN WITH PURPOSE
+              TRADITIONAL & OLYMPIC MASTERY
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
-            OUR COMBAT{" "}
+            THE 4 PILLARS OF{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">
-              DISCIPLINES
+              TAEKWONDO
             </span>
           </h2>
 
           <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl mx-auto">
-            Members get access to specialized training for all age groups and skill levels.
-            Select a discipline below to view its training highlights and batch timetable.
+            Master the complete traditional and Olympic martial art of Taekwondo. Select a specialized module below to explore curriculum milestones, combat drills, and scheduled batches.
           </p>
         </div>
 

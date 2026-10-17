@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fit Kickers | Elite Martial Arts & MMA Academy",
+  title: "Fit Kickers | Elite Taekwondo Academy",
   description:
-    "Master the art of combat and build unstoppable discipline. Taekwondo, Kickboxing, Self-Defense, and MMA for kids, juniors, and adults.",
+    "Master the art of Taekwondo. Olympic sparring (Kyorugi), traditional forms (Poomsae), self-defense (Hosinsool), and board breaking (Kyukpa) for kids, juniors, and adults.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} bg-zinc-950 text-zinc-100 scroll-smooth`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} bg-zinc-950 text-zinc-100 scroll-smooth`}
+    >
       <body className="min-h-screen bg-zinc-950 font-sans antialiased text-zinc-100 overflow-x-hidden selection:bg-red-600 selection:text-white">
         {children}
       </body>

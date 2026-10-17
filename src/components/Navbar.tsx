@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X, ShieldAlert, Calendar, ChevronRight } from "lucide-react";
 
 const NAV_LINKS = [
-  { name: "Disciplines", href: "#disciplines" },
+  { name: "4 Pillars", href: "#disciplines" },
   { name: "Age Groups", href: "#age-groups" },
   { name: "Coaches", href: "#coaches" },
   { name: "Location", href: "#contact" },
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <span className="text-red-500 group-hover:text-red-400 transition-colors">KICKERS</span>
               </div>
               <span className="text-[10px] font-bold tracking-[0.35em] text-zinc-400 uppercase block mt-1 hover:text-red-500 transition-colors">
-                ACADEMY
+                TAEKWONDO ACADEMY
               </span>
             </Link>
 
@@ -79,8 +79,14 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Right Action / CTA Desktop -> Smooth scroll to #contact */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* Right Action / CTA Desktop -> Student Portal + WhatsApp Trial */}
+            <div className="hidden md:flex items-center gap-3">
+              <Link
+                href="/login"
+                className="inline-flex items-center justify-center px-4 py-2 rounded-md bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white text-xs sm:text-sm font-bold uppercase tracking-wider border border-zinc-700/80 hover:border-zinc-500 transition-all cursor-pointer"
+              >
+                Student Portal
+              </Link>
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-red-600 hover:bg-red-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-[0_0_20px_rgba(239,68,68,0.35)] hover:shadow-[0_0_28px_rgba(239,68,68,0.6)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
@@ -139,16 +145,24 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="pt-2 border-t border-zinc-850">
-            <div className="p-4 rounded-xl bg-zinc-900/70 border border-zinc-800 mb-6">
+          <div className="pt-2 border-t border-zinc-850 space-y-3">
+            <div className="p-4 rounded-xl bg-zinc-900/70 border border-zinc-800 mb-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase text-amber-500 tracking-wider mb-1">
                 <ShieldAlert className="w-4 h-4 text-amber-500" />
                 <span>Limited Free Slots</span>
               </div>
               <p className="text-xs text-zinc-400">
-                Experience world-class Taekwondo, Kickboxing, Self-Defense & MMA classes today.
+                Experience world-class Taekwondo classes today.
               </p>
             </div>
+
+            <Link
+              href="/login"
+              onClick={closeMenu}
+              className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-bold uppercase text-xs tracking-wider transition-all cursor-pointer"
+            >
+              Student Portal Login
+            </Link>
 
             <a
               href="#contact"

@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-xs text-zinc-400 leading-relaxed">
-              Premier martial arts & MMA combat training academy. Building discipline, strength, and confidence across all ages.
+              Premier traditional and Olympic Taekwondo academy. Building discipline, strength, and belt mastery across all ages.
             </p>
           </div>
 
@@ -28,17 +28,17 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#disciplines" className="hover:text-red-400 transition-colors">
-                  Disciplines & Timetable
+                  4 Pillars of Taekwondo
                 </a>
               </li>
               <li>
                 <a href="#age-groups" className="hover:text-red-400 transition-colors">
-                  Age Groups & Programs
+                  Age Groups & Belt Levels
                 </a>
               </li>
               <li>
                 <a href="#coaches" className="hover:text-red-400 transition-colors">
-                  Elite Coaching Staff
+                  Certified Black Belt Staff
                 </a>
               </li>
               <li>
@@ -52,13 +52,13 @@ export default function Footer() {
           {/* Disciplines */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-200 mb-4 font-mono">
-              Disciplines
+              Core Pillars
             </h4>
             <ul className="space-y-2 text-xs">
-              <li>Taekwondo (WTF Belt Progression)</li>
-              <li>Kickboxing & Conditioning</li>
-              <li>Practical Self-Defense & CQB</li>
-              <li>Mixed Martial Arts (MMA)</li>
+              <li>Poomsae (Forms & Belt Progression)</li>
+              <li>Kyorugi (Olympic Sparring)</li>
+              <li>Hosinsool (Taekwondo Self-Defense)</li>
+              <li>Kyukpa (Board Breaking & Demonstration)</li>
             </ul>
           </div>
 
