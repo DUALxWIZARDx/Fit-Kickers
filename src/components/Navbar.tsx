@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ShieldAlert, Calendar, ChevronRight } from "lucide-react";
+import { Menu, X, ShieldAlert, ChevronRight } from "lucide-react";
 
 const NAV_LINKS = [
   { name: "4 Pillars", href: "#disciplines" },
@@ -79,7 +79,7 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Desktop student portal and trial booking actions */}
+            {/* Desktop student portal action */}
             <div className="hidden md:flex items-center gap-3">
               <Link
                 href="/login"
@@ -87,12 +87,6 @@ export default function Navbar() {
               >
                 Student Portal
               </Link>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-red-600 hover:bg-red-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-[0_0_20px_rgba(239,68,68,0.35)] hover:shadow-[0_0_28px_rgba(239,68,68,0.6)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-              >
-                Book Free Trial
-              </a>
             </div>
 
             {/* Mobile Hamburger Button */}
@@ -163,15 +157,6 @@ export default function Navbar() {
             >
               Student Portal Login
             </Link>
-
-            <a
-              href="#contact"
-              onClick={closeMenu}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-red-600 hover:bg-red-500 text-white font-extrabold uppercase text-sm tracking-wider shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all cursor-pointer"
-            >
-              <Calendar className="w-4 h-4" />
-              Book Free Trial
-            </a>
           </div>
         </div>
 
