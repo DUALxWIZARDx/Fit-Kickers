@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import {
   Flame,
@@ -12,7 +13,6 @@ import {
   ChevronRight,
   Sparkles,
   Info,
-  MessageSquare,
 } from "lucide-react";
 
 interface DisciplineData {
@@ -201,25 +201,11 @@ export default function Disciplines() {
   const currentDiscipline =
     DISCIPLINES.find((d) => d.id === activeId) || DISCIPLINES[0];
 
-  const handleInquireAvailability = (batchTitle?: string) => {
-    const detail = batchTitle
-      ? ` for the *${batchTitle}*`
-      : "";
-    const text = encodeURIComponent(
-      `Hello Fit Kickers! I'd like to check current open slot availability for *${currentDiscipline.name}*${detail}. Please share details for our age group.`
-    );
-    window.open(`https://wa.me/?text=${text}`, "_blank");
-  };
-
   return (
     <section
       id="disciplines"
-      className="relative py-20 sm:py-28 bg-zinc-950/40 backdrop-blur-[2px] text-white overflow-hidden"
+      className="relative bg-transparent py-20 text-white sm:py-28"
     >
-      {/* Background glow accents */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-600/10 blur-[130px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 left-0 w-80 h-80 bg-red-600/5 blur-[120px] rounded-full pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -254,10 +240,10 @@ export default function Disciplines() {
                   key={item.id}
                   type="button"
                   onClick={() => setActiveId(item.id)}
-                  className={`w-full min-h-[58px] sm:min-h-[72px] p-4 rounded-xl text-left transition-all duration-200 border flex items-center gap-3.5 cursor-pointer ${
+                  className={`w-full min-h-[58px] sm:min-h-[72px] p-4 rounded-xl text-left transition-all duration-200 border border-zinc-800/80 backdrop-blur-md flex items-center gap-3.5 cursor-pointer ${
                     isActive
                       ? "border-red-500 bg-red-950/20 shadow-[0_0_15px_rgba(239,68,68,0.15)]"
-                      : "border-zinc-800 bg-zinc-900/60 hover:bg-zinc-900 hover:border-zinc-700 text-zinc-300"
+                      : "bg-zinc-900/80 hover:bg-zinc-900 hover:border-zinc-700 text-zinc-300"
                   }`}
                 >
                   <div
@@ -285,7 +271,7 @@ export default function Disciplines() {
         </div>
 
         {/* 2. Crisp, High-Impact Content (3 short bullet points with bold leading tags) */}
-        <div className="bg-zinc-900/85 border border-zinc-800/80 rounded-2xl p-5 sm:p-7 mb-8 backdrop-blur-md shadow-xl">
+        <div className="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-5 sm:p-7 mb-8 backdrop-blur-md shadow-xl">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 pb-4 border-b border-zinc-800">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-red-500 font-mono">
@@ -304,7 +290,7 @@ export default function Disciplines() {
             {currentDiscipline.bullets.map((b, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl bg-zinc-950/70 border border-zinc-800/80 flex items-start gap-3"
+                className="p-4 rounded-xl bg-zinc-900/80 border border-zinc-800/80 backdrop-blur-md flex items-start gap-3"
               >
                 <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0 mt-1" />
                 <div className="text-xs sm:text-sm text-zinc-300 leading-snug">
@@ -319,7 +305,7 @@ export default function Disciplines() {
         </div>
 
         {/* 3. Flexible Schedule Layout (Placeholder Friendly) */}
-        <div className="bg-zinc-900/85 border border-zinc-800/80 rounded-2xl p-5 sm:p-8 backdrop-blur-md shadow-xl">
+        <div className="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-5 sm:p-8 backdrop-blur-md shadow-xl">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-zinc-800">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center text-red-500 shrink-0">
@@ -335,15 +321,14 @@ export default function Disciplines() {
               </div>
             </div>
 
-            {/* Inquire CTA Button */}
-            <button
-              type="button"
-              onClick={() => handleInquireAvailability()}
+            {/* Booking CTA */}
+            <Link
+              href="/login"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold uppercase text-xs tracking-wider transition-all shadow-[0_0_20px_rgba(239,68,68,0.35)] shrink-0 self-start sm:self-auto"
             >
-              <MessageSquare className="w-4 h-4" />
-              <span>Check Slot Availability</span>
-            </button>
+              <Calendar className="w-4 h-4" />
+              <span>Book Free Trial</span>
+            </Link>
           </div>
 
           {/* Clean Batch Cards Grid */}
@@ -351,7 +336,7 @@ export default function Disciplines() {
             {currentDiscipline.batches.map((batch, index) => (
               <div
                 key={index}
-                className="bg-zinc-950/80 border border-zinc-800 hover:border-zinc-700 rounded-xl p-4 sm:p-5 flex flex-col justify-between transition-colors duration-150"
+                className="bg-zinc-900/80 border border-zinc-800/80 hover:border-zinc-700 rounded-xl p-4 sm:p-5 backdrop-blur-md flex flex-col justify-between transition-colors duration-150"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
@@ -375,23 +360,22 @@ export default function Disciplines() {
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => handleInquireAvailability(batch.title)}
+                <Link
+                  href="/login"
                   className="w-full mt-2 py-2 px-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white text-xs font-semibold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5"
                 >
-                  <span>Select Batch</span>
+                  <span>Book This Batch</span>
                   <ChevronRight className="w-3.5 h-3.5 text-red-400" />
-                </button>
+                </Link>
               </div>
             ))}
           </div>
 
           {/* Helper Note */}
-          <div className="flex items-start sm:items-center gap-2.5 p-3.5 rounded-xl bg-zinc-950/50 border border-zinc-800/60 text-zinc-400 text-xs">
+          <div className="flex items-start sm:items-center gap-2.5 p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80 backdrop-blur-md text-zinc-400 text-xs">
             <Info className="w-4 h-4 text-amber-500 shrink-0 mt-0.5 sm:mt-0" />
             <p>
-              <strong className="text-zinc-300">Note:</strong> Batch timings are customized by age group. Inquire for current open slot availability.
+              <strong className="text-zinc-300">Note:</strong> Batch timings are customized by age group. Book a free trial to discuss current openings.
             </p>
           </div>
         </div>

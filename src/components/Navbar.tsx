@@ -79,7 +79,7 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Right Action / CTA Desktop -> Student Portal + WhatsApp Trial */}
+            {/* Desktop student portal and trial booking actions */}
             <div className="hidden md:flex items-center gap-3">
               <Link
                 href="/login"

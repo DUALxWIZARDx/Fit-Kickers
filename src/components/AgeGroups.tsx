@@ -1,4 +1,4 @@
-import { Users, Shield, Zap, Trophy, CheckCircle2 } from "lucide-react";
+import { Users, CheckCircle2 } from "lucide-react";
 
 interface AgeGroup {
   id: string;
@@ -62,10 +62,8 @@ export default function AgeGroups() {
   return (
     <section
       id="age-groups"
-      className="relative py-20 sm:py-28 bg-zinc-950/40 backdrop-blur-[2px] text-white overflow-hidden scroll-mt-12"
+      className="relative bg-transparent py-20 text-white sm:py-28 scroll-mt-12"
     >
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-red-600/10 blur-[130px] rounded-full pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 shadow-[0_0_15px_rgba(239,68,68,0.2)] mb-4">
@@ -91,7 +89,7 @@ export default function AgeGroups() {
           {AGE_GROUPS.map((group) => (
             <div
               key={group.id}
-              className="p-6 sm:p-7 rounded-2xl bg-zinc-900/85 backdrop-blur-md border border-zinc-800/80 hover:border-zinc-700 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 group relative overflow-hidden shadow-lg"
+              className="rounded-2xl border border-zinc-800/80 bg-zinc-900/80 p-6 sm:p-8 backdrop-blur-md hover:border-zinc-700 transition-all duration-200 hover:-translate-y-1 group relative overflow-hidden shadow-lg"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -122,13 +120,6 @@ export default function AgeGroups() {
                   ))}
                 </div>
               </div>
-
-              <a
-                href="#contact"
-                className="w-full min-h-[48px] py-3 px-4 rounded-xl bg-zinc-950 hover:bg-red-600 text-zinc-200 hover:text-white border border-zinc-800 hover:border-red-500 text-xs font-bold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-[0_0_20px_rgba(239,68,68,0.35)]"
-              >
-                <span>Enroll in {group.name}</span>
-              </a>
             </div>
           ))}
         </div>

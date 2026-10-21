@@ -4,11 +4,7 @@ import { Award, ArrowRight, Shield, Zap, Swords, Flame } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-zinc-950/20 pt-20">
-      {/* Atmospheric Subtle Vignette Overlays */}
-      <div className="absolute inset-0 bg-black/25 pointer-events-none z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/40 via-transparent to-zinc-950/50 pointer-events-none z-10" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[700px] h-[350px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none z-10" />
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-transparent pt-20">
 
       {/* Overlay Content Container */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">

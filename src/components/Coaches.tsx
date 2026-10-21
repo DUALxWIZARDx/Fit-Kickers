@@ -48,10 +48,8 @@ export default function Coaches() {
   return (
     <section
       id="coaches"
-      className="relative py-20 sm:py-28 bg-zinc-950/40 backdrop-blur-[2px] text-white overflow-hidden scroll-mt-12"
+      className="relative bg-transparent py-20 text-white sm:py-28 scroll-mt-12"
     >
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-red-600/10 blur-[140px] rounded-full pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 shadow-[0_0_15px_rgba(239,68,68,0.2)] mb-4">
@@ -77,7 +75,7 @@ export default function Coaches() {
           {COACHES.map((coach, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl bg-zinc-900/85 backdrop-blur-md border border-zinc-800/80 hover:border-zinc-700 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 relative group shadow-lg"
+              className="rounded-2xl border border-zinc-800/80 bg-zinc-900/80 p-6 backdrop-blur-md hover:border-zinc-700 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 relative group shadow-lg"
             >
               <div>
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-600/20 to-zinc-800 border border-red-500/30 flex items-center justify-center text-red-500 mb-4 group-hover:scale-105 transition-transform duration-200 shadow-[0_0_15px_rgba(239,68,68,0.2)]">

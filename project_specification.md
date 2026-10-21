@@ -6,7 +6,7 @@
 - **Target Audience:** 
   - Parents seeking discipline, anti-bullying skills, and motor development for kids.
   - Teens and adults looking for martial arts mastery, self-defense, fitness, or competition.
-- **Primary Conversion Goal:** Direct lead capture redirecting to WhatsApp with a pre-filled, formatted message for a 1-Week Free Trial.
+- **Primary Conversion Goal:** Direct prospective students to the academy enrollment and trial booking flow.
 
 ## 2. Core Disciplines & Timetables
 The academy offers four distinct disciplines. Selecting any discipline dynamically highlights its details and reveals its specific class schedule:
@@ -29,7 +29,7 @@ The academy offers four distinct disciplines. Selecting any discipline dynamical
 1. **Sticky Navigation Bar:**
    - Fit Kickers logo (Bold Red/White branding).
    - Desktop Links: Disciplines, Age Groups, Coaches, Address & Timetable.
-   - Primary Action Button: "Book Free Trial" (WhatsApp CTA).
+   - Primary Action Button: "Book Free Trial" linking to `/login`.
    - Mobile: Responsive slide-over drawer navigation.
 2. **Hero Section (Ambient Dark Video Background):**
    - Full-width HTML5 video element running on loop at low brightness (15–20% opacity) behind a dark backdrop overlay (`bg-black/80`).
@@ -43,9 +43,8 @@ The academy offers four distinct disciplines. Selecting any discipline dynamical
    - 3 cards detailing Little Champions, Juniors, and Adults with tailored benefit bullets.
 5. **Head Coaches Showcase:**
    - 3 profile cards featuring coach images, martial arts ranks/titles, brief bios, and a "Watch Highlights" video modal trigger.
-6. **WhatsApp Lead Capture Form:**
-   - Inputs: Name, Phone Number, Preferred Discipline, Age Group, Preferred Slot.
-   - On submit: Formats input into an encoded URL parameter and opens `https://wa.me/` directly.
+6. **Enrollment & Trial Booking:**
+   - Use the academy's internal `/login` enrollment flow for trial booking and student registration.
 7. **Address & Location Details:**
    - Text display of physical address, operating hours, phone hotline, and contact email.
 8. **Footer:**
