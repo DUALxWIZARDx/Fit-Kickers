@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Award, ArrowRight, Shield, Zap, Swords, Flame } from "lucide-react";
 
 export default function Hero() {
@@ -47,13 +48,13 @@ export default function Hero() {
         {/* CTA Group: smooth scroll to #contact */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
           {/* Primary red glow button */}
-          <a
-            href="#contact"
+          <Link
+            href="/login"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-red-600 hover:bg-red-500 text-white font-extrabold uppercase text-sm sm:text-base tracking-wider transition-all duration-200 shadow-[0_0_25px_rgba(239,68,68,0.5)] hover:shadow-[0_0_35px_rgba(239,68,68,0.7)] hover:-translate-y-0.5 active:translate-y-0 group"
           >
             <span>Claim Your Free Trial</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
-          </a>
+          </Link>
 
           {/* Secondary outlined button */}
           <a
