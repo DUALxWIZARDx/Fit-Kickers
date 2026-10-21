@@ -110,9 +110,13 @@ export default function LoginPage() {
       } else {
         router.push('/portal'); // Proceed to portal where fallback handles it
       }
-    } catch (err: any) {
+    } catch (err) {
       console.error('Firebase Login Error:', err);
-      setErrorMsg(err.message || 'Invalid email or password. Please try again.');
+      setErrorMsg(
+        err instanceof Error
+          ? err.message
+          : 'Invalid email or password. Please try again.',
+      );
     } finally {
       setLoading(false);
     }
@@ -147,9 +151,13 @@ export default function LoginPage() {
       // 3. Redirect to Dashboard
       setShowBreakdownModal(false);
       router.push('/portal');
-    } catch (err: any) {
+    } catch (err) {
       console.error('Firebase Enrollment Error:', err);
-      setErrorMsg(err.message || 'Could not complete enrollment. Please check details.');
+      setErrorMsg(
+        err instanceof Error
+          ? err.message
+          : 'Could not complete enrollment. Please check details.',
+      );
       setShowBreakdownModal(false);
     } finally {
       setLoading(false);
@@ -313,7 +321,11 @@ export default function LoginPage() {
               <label className="block text-xs font-mono uppercase text-zinc-400 mb-1.5">Membership Duration *</label>
               <select
                 value={selectedDurationKey}
-                onChange={(e) => setSelectedDurationKey(e.target.value as any)}
+                onChange={(e) =>
+                  setSelectedDurationKey(
+                    e.target.value as '3_months' | '6_months' | '12_months',
+                  )
+                }
                 className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-600"
               >
                 <option value="3_months">3 Months (Standard)</option>

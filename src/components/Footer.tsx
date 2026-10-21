@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = 2026;
